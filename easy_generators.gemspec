@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.description = %q{Easy Generators for Rails}
   s.email = %q{mexpolk@gmail.com}
   s.extra_rdoc_files = ["README.rdoc", "lib/easy_generators.rb"]
-  s.files = ["Manifest", "generators/easy_layout/templates/stylesheets/sass/application.sass", "generators/easy_layout/templates/helpers/shadowbox_helper.rb", "generators/easy_layout/templates/images/body_bg.svg", "generators/easy_layout/templates/images/body_bg.png", "generators/easy_layout/templates/layouts/application.haml", "generators/easy_layout/easy_layout_generator.rb", "README.rdoc", "Rakefile", "lib/easy_generators.rb", "easy_generators.gemspec"]
+  s.files = ["Manifest", "generators/easy_layout/templates/stylesheets/sass/application.sass", "generators/easy_layout/templates/helpers/shadowbox_helper.rb", "generators/easy_layout/templates/images/body_bg.svg", "generators/easy_layout/templates/images/body_bg.png", "generators/easy_layout/templates/layouts/application.haml", "generators/easy_layout/easy_layout_generator.rb", "README.rdoc", "Rakefile", "easy_generators.gemspec", "lib/easy_generators.rb"]
   s.has_rdoc = true
   s.homepage = %q{http://github.com/innetra/haml_layout}
   s.rdoc_options = ["--line-numbers", "--inline-source", "--title", "Easy_generators", "--main", "README.rdoc"]
