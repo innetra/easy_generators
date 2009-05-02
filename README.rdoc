@@ -1,6 +1,6 @@
-= Base Haml Layout Generator
+= Rails Generators
 
-Layout generator for Ruby on Rails using Haml and Sass
+A collection for generators for Ruby on Rails
 
 == Requirements
 
@@ -8,7 +8,8 @@ EasyNavigtion gem (http://github.com/innetra/easy_navigation/tree/master)
 
 == Install
 
-  sudo gem install haml_layout
+  gem sources -a http://gems.github.com
+  sudo gem install innetra-easy_generators
 
 == Usage
 
