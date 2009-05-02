@@ -1,0 +1,213 @@
+// *****************************************************************************
+// Layout elements color's
+// *****************************************************************************
+!body_bg_color = #EFEFEF
+!body_bg_image = "url(/images/body_bg.png)"
+!page_bg_color = #FFF
+!sidebar_bg_color = #EFEFEF
+!sidebar_border_color = #DDD
+!text_color = #696969
+!headers_color = #707070
+!link_color = #21A1D5
+!line = #BEBEBE
+
+// *****************************************************************************
+// Forms
+// *****************************************************************************
+
+// Input[type=text|password] and textarea colors with shadow effect
+!form_input_light_border = #BEBEBE
+!form_input_dark_border = #8C8C8C
+
+// The color for * (asterisk) indicating required fields
+!required_field_mark_color = #F00
+
+// Comment's color
+!comment_color = #BEBEBE
+
+// *****************************************************************************
+// Shadowbox colors
+// *****************************************************************************
+!shadow1_bg_color = #C9C9C9
+!shadow2_bg_color = #B0B0B0
+!shadow3_bg_color = #A9A9A9
+
+// *****************************************************************************
+// *****************************************************************************
+@media all
+
+  // ***************************************************************************
+  // Tags
+  // ***************************************************************************
+  body
+    font:
+      family: arial, sans-serif
+      size: 14px
+    min-width: 980px
+
+  hr
+    border: 0
+    border-bottom-width: 1px
+    border-bottom-style: dotted
+
+  .wrapper
+    margin: 0 20px
+
+  // ***************************************************************************
+  // Forms
+  // ***************************************************************************
+  form
+    input[type=password],
+    input[type=text],
+    textarea
+      border-width: 1px
+      border-style: solid
+      margin: 3px 0
+    .comment
+      font-size: 12px
+
+  // ***************************************************************************
+  // Head
+  // ***************************************************************************
+  #head
+    height: 140px
+    width: 100%
+    margin-bottom: 20px
+
+    #toolbar
+      height: 25px
+
+    #title
+      height: 80px
+
+    #navigation
+      clear: both
+      height: 33px
+      margin: 0
+      padding: 0
+
+      ul .navigation
+        float: left
+        display: block
+        margin: 0 20px
+
+  // ***************************************************************************
+  // Content
+  // ***************************************************************************
+  #page
+    margin-right: 370px
+
+    #page_content .container
+      padding: 10px
+
+      h1
+        font-family: helvetica,arial,sans-serif
+        margin: 0 0 20px
+
+        div
+          float: right
+          font-size: 14px
+          font-weight: normal
+
+  // ***************************************************************************
+  // Sidebar
+  // ***************************************************************************
+  #sidebar
+    float: right
+    width: 350px
+    padding: 0
+    margin: 0
+
+  // ***************************************************************************
+  // Shadowbox
+  // ***************************************************************************
+  .shadow
+    margin:
+      left: 3px
+      top: 3px
+
+    .shadow1, .shadow2, .shadow3, .container
+      position: relative
+      left: -1px
+      top: -1px
+
+// *****************************************************************************
+// *****************************************************************************
+@media screen
+
+  // ***************************************************************************
+  // Tags
+  // ***************************************************************************
+  body
+    background:
+      color = !body_bg_color
+      image = !body_bg_image
+      repeat: repeat-x
+    color = !text_color
+    margin: 0
+
+  a
+    color = !link_color
+
+  hr
+    border-bottom-color: !line
+
+  // ***************************************************************************
+  // Forms (screen)
+  // ***************************************************************************
+  form
+    input[type=password],
+    input[type=text],
+    textarea
+      border-color: !form_input_light_border
+      border-top-color: !form_input_dark_border
+      border-left-color: !form_input_dark_border
+    .comment
+      color = !comment_color
+    .required
+      color = !required_field_mark_color
+
+  // ***************************************************************************
+  // Content (screen)
+  // ***************************************************************************
+  #page
+    #page_content .container
+      background-color = !page_bg_color
+      h1
+        color = !headers_color
+
+  // ***************************************************************************
+  // Sidebar (screen)
+  // ***************************************************************************
+  #sidebar
+    .sidebar_section
+      background-color = !sidebar_bg_color
+      border:
+        color = !sidebar_border_color
+        style: solid
+        width: 5px
+      padding: 10px
+
+  // ***************************************************************************
+  // Shadowbox (screen)
+  // ***************************************************************************
+  .shadow
+    .shadow1
+      background-color = !shadow1_bg_color
+      .shadow2
+        background-color = !shadow2_bg_color
+        .shadow3
+          background-color = !shadow3_bg_color
+
+// *****************************************************************************
+// *****************************************************************************
+@media print
+
+  body
+    margin: 0
+
+  .wrapper
+    margin: 0
+
+  #head
+    display: none

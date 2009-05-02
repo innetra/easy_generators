@@ -1,0 +1,20 @@
+!!! XML
+!!! Strict
+%html{ :xmlns => "http://www.w3.org/1999/xhtml" }
+  %head
+    %title= "Codebase [#{yield :title}]"
+    = stylesheet_link_tag :all, :media => :all
+    = javascript_include_tag :all, :cache => true
+    = yield :head
+  %body
+    #main
+      #head
+        .wrapper
+          #toolbar=yield :toolbar
+          #title=yield :title
+          #navigation=easy_navigation :default
+      #content.wrapper
+        #sidebar=yield :sidebar
+        #page
+          - shadowbox "page_content" do
+            = yield
