@@ -2,7 +2,7 @@
 !!! Strict
 %html{ :xmlns => "http://www.w3.org/1999/xhtml" }
   %head
-    %title= "Codebase [#{yield :title}]"
+    %title= "<%=  %> [#{yield :title}]"
     = stylesheet_link_tag :all, :media => :all
     = javascript_include_tag :all, :cache => true
     = yield :head
