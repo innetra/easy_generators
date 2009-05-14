@@ -1,11 +1,12 @@
 Manifest
 generators/easy_layout/templates/stylesheets/sass/application.sass
+generators/easy_layout/templates/helpers/layout_helper.rb
 generators/easy_layout/templates/helpers/shadowbox_helper.rb
 generators/easy_layout/templates/images/body_bg.svg
 generators/easy_layout/templates/images/body_bg.png
+generators/easy_layout/templates/config/initializers/rails_teaks.rb
 generators/easy_layout/templates/layouts/application.haml
 generators/easy_layout/easy_layout_generator.rb
 README.rdoc
 Rakefile
-easy_generators.gemspec
 lib/easy_generators.rb

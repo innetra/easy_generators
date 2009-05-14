@@ -1,36 +1,56 @@
 // *****************************************************************************
 // Layout elements color's
 // *****************************************************************************
-!body_bg_color = #EFEFEF
-!body_bg_image = "url(/images/body_bg.png)"
-!page_bg_color = #FFF
-!sidebar_bg_color = #EFEFEF
-!sidebar_border_color = #DDD
-!text_color = #696969
-!headers_color = #707070
+!body_background_color = #EFEFEF
+!body_background_image = url(\/images\/body_bg.png)
+!default_border_color = #E0E0E0
+!head_color = #707070
 !link_color = #21A1D5
-!line = #BEBEBE
+!page_background_color = #FFF
+!text_color = #696969
+!toolbar_color = #FFF
+
+// Sidebar
+!sidebar_width = 350px
+!sidebar_content_width = 370px
+!sidebar_section_background_color = #EFEFEF
+!sidebar_section_border_color = #DDD
+!sidebar_section_border_width = 3px
 
 // *****************************************************************************
 // Forms
 // *****************************************************************************
 
+// Flash messages
+!flash_background_color = #FFFFCC
+!flash_error_color = #F00
+!flash_notice_color = #000
+
 // Input[type=text|password] and textarea colors with shadow effect
-!form_input_light_border = #BEBEBE
-!form_input_dark_border = #8C8C8C
+!form_input_dark_border_color = #8C8C8C
+!form_input_light_border_color = #BEBEBE
 
 // The color for * (asterisk) indicating required fields
-!required_field_mark_color = #F00
+!required_field_symbol_color = #F00
 
 // Comment's color
-!comment_color = #BEBEBE
+!comment_color = #9E9E9E
+
+// Errors
+!form_error_color = #F00
 
 // *****************************************************************************
 // Shadowbox colors
 // *****************************************************************************
-!shadow1_bg_color = #C9C9C9
-!shadow2_bg_color = #B0B0B0
-!shadow3_bg_color = #A9A9A9
+!shadow1_background_color = #C9C9C9
+!shadow2_background_color = #B0B0B0
+!shadow3_background_color = #A9A9A9
+
+// *****************************************************************************
+// Fonts
+// *****************************************************************************
+!font_family = "helvetica, arial, sans-serif"
+!font_size = 16px
 
 // *****************************************************************************
 // *****************************************************************************
@@ -39,32 +59,116 @@
   // ***************************************************************************
   // Tags
   // ***************************************************************************
-  body
+  body *
     font:
-      family: arial, sans-serif
-      size: 14px
-    min-width: 980px
+      family = !font_family
+
+  a
+    font-weight: normal
+
+  h1
+    font-size: 1.7em
+    padding: 10px 20px
+    margin: -20px
+    margin-bottom: 20px
+    .comment
+      font:
+        size: 0.7em
+        weight: normal
+
+  h2
+    padding-bottom: 5px
+    font-size: 1.4em
+
+  h3
+    font-size: 1.2em
 
   hr
     border: 0
-    border-bottom-width: 1px
-    border-bottom-style: dotted
+    margin-top: 20px
+
+  h1, h2, hr
+    border-bottom:
+      style: solid
+      width: 1px
+
+  ul
+    margin: 0
+    padding: 0
+    li
+      list-style: none
+
+  table
+    border-spacing: 0
+    tr
+      td
+        margin: 0
+        padding: 0
+        vertical-align: top
+
+  // ***************************************************************************
+  // Special classes
+  // ***************************************************************************
+  #flash .container
+    .notice, .error
+      padding: 10px 20px
+      margin-bottom: 10px
+      p
+        margin: 0
 
   .wrapper
     margin: 0 20px
+
+  #sidebar
+    .sidebar_section
+      margin-bottom: 10px
+      h1
+        font-size: 1em
+        line-height: 1.2em
+        margin: 0 -10px
+        margin-bottom: 5px
+        padding: 0 10px
+        padding-bottom: 5px
+        div
+          float: right
+          font-size: 0.9em
+      .comment, td.label
+        font-size: 0.8em
+      td
+        padding-bottom: 10px
+        line-height: 1.4em
+      td.label
+        font-weight: bold
+        padding-right: 10px
+        padding-top: 3px
+        width: 60px
 
   // ***************************************************************************
   // Forms
   // ***************************************************************************
   form
+    .comment
+      font-size: 0.9em
+    .form_error
+      font-size: 0.9em
     input[type=password],
     input[type=text],
     textarea
-      border-width: 1px
-      border-style: solid
-      margin: 3px 0
-    .comment
-      font-size: 12px
+      width: 350px
+    input[type=password],
+    input[type=text],
+    select,
+    textarea
+      font-size: 1em
+      margin: 5px 5px 5px 0
+      padding: 1px
+      line-height: 1em
+
+    option
+      font-size: 1em
+      line-height: 1em
+    a
+      font-size: 0.9em
 
   // ***************************************************************************
   // Head
@@ -72,12 +176,13 @@
   #head
     height: 140px
     width: 100%
-    margin-bottom: 20px
 
     #toolbar
+      font-size: 0.9em
+      line-height: 1.4em
       height: 25px
 
-    #title
+    #logo
       height: 80px
 
     #navigation
@@ -85,38 +190,40 @@
       height: 33px
       margin: 0
       padding: 0
-
       ul .navigation
-        float: left
         display: block
+        float: left
         margin: 0 20px
 
   // ***************************************************************************
   // Content
   // ***************************************************************************
-  #page
-    margin-right: 370px
-
-    #page_content .container
-      padding: 10px
-
-      h1
-        font-family: helvetica,arial,sans-serif
-        margin: 0 0 20px
-
-        div
-          float: right
-          font-size: 14px
-          font-weight: normal
+  #content
+    padding-top: 20px
+    #page.sidebar
+      margin-right = !sidebar_content_width
+    #page
+      .container
+        margin: 0
+        h1
+          position: relative
+          div
+            float: right
+            font:
+              size: 0.6em
+              weight: normal
+            line-height: 2em
 
   // ***************************************************************************
   // Sidebar
   // ***************************************************************************
   #sidebar
     float: right
-    width: 350px
+    width = !sidebar_width
     padding: 0
     margin: 0
+    .sidebar_section
+      padding: 10px
 
   // ***************************************************************************
   // Shadowbox
@@ -125,11 +232,6 @@
     margin:
       left: 3px
       top: 3px
-
-    .shadow1, .shadow2, .shadow3, .container
-      position: relative
-      left: -1px
-      top: -1px
 
 // *****************************************************************************
 // *****************************************************************************
@@ -140,74 +242,105 @@
   // ***************************************************************************
   body
     background:
-      color = !body_bg_color
-      image = !body_bg_image
+      color = !body_background_color
+      image = !body_background_image
       repeat: repeat-x
     color = !text_color
+    font-size = !font_size
     margin: 0
+    min-width: 980px
 
   a
     color = !link_color
 
   hr
-    border-bottom-color: !line
+    border-color: transparent
+
+  h1, h2, hr
+    border-bottom-color = !default_border_color
+
+  // ***************************************************************************
+  // Special classes
+  // ***************************************************************************
+  #flash .container
+    background-color = !flash_background_color
+    .notice p
+      color = !flash_notice_color
+    .error p
+      color = !flash_error_color
 
   // ***************************************************************************
   // Forms (screen)
   // ***************************************************************************
   form
-    input[type=password],
-    input[type=text],
-    textarea
-      border-color = !form_input_light_border
-      border-top-color = !form_input_dark_border
-      border-left-color = !form_input_dark_border
     .comment
       color = !comment_color
     .required
-      color = !required_field_mark_color
+      color = !required_field_symbol_color
+    .form_error
+      color = !form_error_color
+
+  // ***************************************************************************
+  // Head
+  // ***************************************************************************
+  #head
+    #toolbar, #toolbar a
+      color = !toolbar_color
 
   // ***************************************************************************
   // Content (screen)
   // ***************************************************************************
   #page
-    #page_content .container
-      background-color = !page_bg_color
+    .container
+      background-color = !page_background_color
+      margin: -10px 0 10px
+      padding: 20px
       h1
-        color = !headers_color
+        color = !head_color
 
   // ***************************************************************************
   // Sidebar (screen)
   // ***************************************************************************
   #sidebar
     .sidebar_section
-      background-color = !sidebar_bg_color
+      background-color = !sidebar_section_background_color
       border:
-        color = !sidebar_border_color
+        color = !sidebar_section_border_color
         style: solid
-        width: 5px
-      padding: 10px
+        width = !sidebar_section_border_width
 
   // ***************************************************************************
   // Shadowbox (screen)
   // ***************************************************************************
   .shadow
+    .shadow1, .shadow2, .shadow3, .container
+      left: -1px
+      position: relative
+      top: -1px
     .shadow1
-      background-color = !shadow1_bg_color
+      background-color = !shadow1_background_color
       .shadow2
-        background-color = !shadow2_bg_color
+        background-color = !shadow2_background_color
         .shadow3
-          background-color = !shadow3_bg_color
+          background-color = !shadow3_background_color
 
 // *****************************************************************************
 // *****************************************************************************
 @media print
 
-  body
+  body, html
+    font-size: 10pt
     margin: 0
-
-  .wrapper
-    margin: 0
+    padding: 0
 
   #head
     display: none
+
+  #page .container
+    h1 div
+      display: none
+    margin: 0
+    padding: 0
+
+  .wrapper
+    margin: 0

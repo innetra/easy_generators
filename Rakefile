@@ -2,7 +2,7 @@ require 'rubygems'
 require 'rake'
 require 'echoe'
 
-Echoe.new('easy_generators', '1.0.1') do |e|
+Echoe.new('easy_generators', '1.1') do |e|
   e.description    = "Easy Generators for Rails"
   e.url            = "http://github.com/innetra/haml_layout"
   e.author         = "Ivan Torres"

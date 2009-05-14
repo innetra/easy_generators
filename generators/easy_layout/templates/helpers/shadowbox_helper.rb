@@ -6,11 +6,8 @@ module ShadowboxHelper
       content_tag(:div,
         content_tag(:div,
           content_tag(:div,
-            content_tag(:div,
-              capture(&block),
-              :class => class_name
-            ),
-            :class => "shadow3"
+            capture(&block),
+            :class => class_name
           ),
           :class => "shadow2"
         ),
