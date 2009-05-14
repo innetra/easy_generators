@@ -2,6 +2,7 @@ Manifest
 generators/easy_layout/templates/stylesheets/sass/application.sass
 generators/easy_layout/templates/helpers/layout_helper.rb
 generators/easy_layout/templates/helpers/shadowbox_helper.rb
+generators/easy_layout/templates/helpers/form_helper.rb
 generators/easy_layout/templates/images/body_bg.svg
 generators/easy_layout/templates/images/body_bg.png
 generators/easy_layout/templates/config/initializers/rails_teaks.rb

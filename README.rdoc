@@ -4,12 +4,17 @@ A collection for generators for Ruby on Rails
 
 == Requirements
 
-EasyNavigtion gem (http://github.com/innetra/easy_navigation/tree/master)
+* EasyNavigation gem (http://github.com/innetra/easy_navigation/tree/master)
+* Haml
 
 == Install
 
   gem sources -a http://gems.github.com
   sudo gem install innetra-easy_generators
+
+Create your application's layout (app/views/layout/application.haml):
+
+  [RAILS_ROOT]/script/generate easy_layout
 
 == Usage
 
