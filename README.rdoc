@@ -18,9 +18,9 @@ Create your application's layout (app/views/layout/application.haml):
 
 == Usage
 
-This gem is intended to be used with our base_template (http://gist.github.com/105548)
+This gem is intended to be used with our base_template (http://gist.github.com/105723)
 
-rails -m http://gist.github.com/105548.txt your_app_name
+rails -m http://gist.github.com/105723.txt your_app_name
 
 == License
 
