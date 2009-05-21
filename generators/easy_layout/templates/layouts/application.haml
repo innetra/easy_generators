@@ -2,18 +2,22 @@
 !!! Strict
 %html{ :xmlns => "http://www.w3.org/1999/xhtml" }
   %head
-    %title= "New Rails App - #{yield :title}"
-    = stylesheet_link_tag :all, :media => :all
+    %title= "New Application - #{yield :browser_title}"
+    = stylesheet_link_tag :all
     = javascript_include_tag :all, :cache => true
     = yield :head
   %body
     #main
       #head
-        .wrapper
-          #toolbar
+        #toolbar
+          .wrapper
             = render 'sessions/session'
-          #logo
-          #navigation= easy_navigation :default
+        #title
+          .wrapper
+            = image_tag '/images/1px.gif'
+            %h1= yield :title
+        #navigation
+          .wrapper
+            = easy_navigation :default
       #content.wrapper
-        - feedback
         = yield

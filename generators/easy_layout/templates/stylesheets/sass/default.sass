@@ -1,0 +1,360 @@
+// Import constants from current template
+@import template/init.sass
+
+body
+  font-size = !font_size
+  margin: 0
+  min-width: !body_min_width
+  padding: 0
+
+body *
+  font-family = !font_family
+  margin: 0
+  padding: 0
+
+li
+  list-style: none
+
+input,
+select
+  font-size = !content_font_size_normal
+
+select
+  padding-right: 5px
+
+table
+  border-spacing: 0
+  td, th
+    padding-right: 10px
+    text-align: left
+    vertical-align: top
+
+.normal
+
+.bold
+  font-weight: bold
+
+.full_wide
+  width: 99% !important
+
+.wrapper
+  margin: 0 20px
+
+#head
+  height = !head_height
+
+  .big, .big > *
+    font-size = !head_font_size_big
+  .medium, .medium > *
+    font-size = !head_font_size_medium
+  .normal, .normal > *
+    font-size = !head_font_size_normal
+  .small, .small > *
+    font-size = !head_font_size_small
+
+  #toolbar
+    .wrapper
+      font-size = !head_font_size_small
+      line-height: 25px
+      height: 25px
+
+  #title
+    margin: 10px 0
+    .wrapper
+      img
+        height = !title_logo_height
+        width = !title_logo_width
+        background:
+          image = !title_logo_background_image
+          repeat: repeat-none
+        float: left
+      h1
+        font-size = !head_font_size_big
+        line-height = !title_logo_height
+        margin-left = !title_logo_width + 10px
+        span.comment
+          font-size = !head_font_size_normal
+
+  #navigation
+    .wrapper
+      .navigation
+        a
+          display: block
+          font-size = !head_font_size_small
+          line-height: 20px
+          padding: 5px
+          text-decoration: none
+
+        li.tab
+          float: left
+          margin-right: 10px
+          ul
+            left: auto
+            min-width: 150px
+            position: absolute
+            top: auto
+            z-index: 1001
+            li.menu
+              float: none
+              a
+                background-color = !easy_navigation_tab_background_color
+        li.drop
+          padding-right: 10px
+
+#content.wrapper
+  padding-top: 20px
+
+  .big, .big > *
+    font-size = !content_font_size_big
+  .medium, .medium > *
+    font-size = !content_font_size_medium
+  .normal, .normal > *
+    font-size = !content_font_size_normal
+  .small, .small > *
+    font-size = !content_font_size_small
+
+  h1, h2, h3, hr
+    border: none
+    border-bottom:
+      style: solid
+      width: 1px
+
+  h2, h3
+    padding-bottom: 5px
+    padding-top: 10px
+    margin-bottom: 20px
+
+  h1
+    font-size = !content_font_size_big
+  h2
+    font-size = !content_font_size_medium
+  h3
+    font-size = !content_font_size_normal
+
+  hr
+    margin-bottom: 10px
+
+  span.comment
+    font-size = !content_font_size_small
+
+  .form_error
+    color = !form_error_color
+
+  #page
+    #page_content
+
+      input[type=password],
+      input[type=text],
+      textarea
+        width: 350px
+
+      label
+        padding-bottom: 10px
+
+      .container
+        padding: 20px
+        position: relative
+
+        .title_actions
+          font-size = !content_font_size_normal
+          line-height: 20px
+          position: absolute
+          right: 30px
+          top: 10px
+          z-order: 1000
+
+        #flash
+          .content
+            margin: -20px
+            font-weight: bold
+            margin-bottom: 20px
+            p
+              padding: 10px
+              padding-left: 20px
+
+        h1
+          padding: 0 20px
+          padding-top: 10px
+          margin: -20px
+          margin-bottom: 20px
+
+          input
+            font-size = !content_font_size_big
+
+          input.wide
+            width: 100%
+
+          table
+            width: auto
+            td
+              padding-right: 10px
+
+          .comment
+            font-size = !content_font_size_small
+            font-weight: normal
+
+        table.report
+          thead
+            tr
+              th
+                border-bottom: 1px solid
+                font-size = !content_font_size_medium
+                padding-bottom: 10px
+                text-align: left
+          tbody
+            tr:first-child
+              td
+                padding-top: 10px
+
+        p
+          padding-bottom: 10px
+
+        form
+          label
+            font-weight: bold
+          .comment
+            font-size = !content_font_size_small
+
+  #page.sidebar
+    margin-right = !page_sidebar_margin
+
+  #sidebar
+    float: right
+    font-size = !sidebar_font_size_normal
+    width = !sidebar_width
+
+    .big, .big > *
+      font-size = !sidebar_font_size_big
+    .medium, .medium > *
+      font-size = !sidebar_font_size_medium
+    .normal, .normal > *
+      font-size = !sidebar_font_size_normal
+    .small, .small > *
+      font-size = !sidebar_font_size_small
+
+    .container
+      position: relative
+      padding: 10px
+      margin-bottom: 20px
+
+      h1
+        font-size = !sidebar_font_size_big
+        margin: -10px
+        margin-bottom: 10px
+        padding: 10px
+        padding-bottom: 10px
+
+      .title_actions
+        font-weight: normal
+        float: right
+        font-size = !sidebar_font_size_small
+        line-height: 20px
+
+      p
+        padding-bottom: 5px
+
+      table
+        th.label
+          font-size = !sidebar_font_size_small
+          width: 70px
+
+@media screen
+
+  body
+    background-color = !body_background_color
+
+  #head
+    background:
+      color = !head_background_color
+      image = !head_background_image
+      repeat = !head_background_repeat
+
+    #toolbar
+      background-color = !toolbar_background_color
+      .wrapper, .wrapper a
+        color = !toolbar_color
+
+    #title
+      .wrapper
+        h1
+          color = !head_color
+
+    #navigation
+      .wrapper
+        .navigation
+          a
+            color = !easy_navigation_tab_color
+            background-color = !easy_navigation_tab_background_color
+
+          li.tab:hover
+            background-color = !easy_navigation_hover_tab_background_color
+          li.tab.current
+            background-color = !easy_navigation_current_tab_background_color
+            a.tab_link
+              color = !easy_navigation_current_tab_color
+
+          li.drop
+            background:
+              image = !easy_navigation_drop_down_indicator_image
+              repeat: no-repeat
+              position: 95% 60%
+            padding-right: 10px
+
+            ul
+              background-color = !easy_navigation_current_menu_background_color
+              li.menu a.menu_link:hover
+                background-color = !easy_navigation_hover_menu_background_color
+              li.menu.current
+                background-color = !easy_navigation_current_menu_background_color
+                a.menu_link
+                  color = !easy_navigation_current_menu_color
+
+  #content.wrapper
+    color = !text_color
+
+    a
+      color = !anchor_color
+
+    h1, h2, h3, hr
+      border-bottom-color = !border_color
+
+    span.comment
+      color = !comment_color
+
+    #page
+      #page_content
+        #flash
+          .content
+            background-color = !flash_background_color
+            color = !flash_notice_color
+        #flash
+          .content.error
+            color = !flash_error_color
+        .container
+          background-color = !page_background_color
+          table.report
+            thead
+              tr
+                th
+                  border-color = !border_color
+
+    #sidebar
+      .container
+        background-color = !sidebar_section_background_color
+        border:
+          color = !sidebar_section_border_color
+          style = !sidebar_section_border_style
+          width = !sidebar_section_border_width
+
+  .shadow
+    margin:
+      left: 2px
+      top: 2px
+    .shadow1, .shadow2 .container
+      left: -1px
+      position: relative
+      top: -1px
+    .shadow1
+      background-color = !shadow1_background_color
+      .shadow2
+        background-color = !shadow2_background_color
